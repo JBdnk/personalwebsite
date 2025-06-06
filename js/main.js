@@ -17,13 +17,13 @@ const phrases = [
   'Hire me before I realize my rates should go up',
 ];
 
-const typingSpeed = 50;  // ms per character
+const typingSpeed = 50; 
 const erasingSpeed = 50;
-const delayBetween = 1500;  // pause before erasing
+const delayBetween = 1500;  
 
 const typingElement = document.getElementById('typing-text');
 
-// Prevent line break and center the moving text
+
 if (typingElement) {
   typingElement.style.whiteSpace = 'nowrap';
   typingElement.style.display = 'inline-block';
@@ -62,14 +62,13 @@ function type() {
   }
 }
 
-// Start the typing effect
+
 document.addEventListener('DOMContentLoaded', () => {
   if (typingElement) {
     type();
   }
 });
 
-// Rate limit for anonymous message form (30 minutes) and Formspree JSON POST
 
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('.message-form');
@@ -128,8 +127,8 @@ document.addEventListener('DOMContentLoaded', () => {
         button.textContent = 'Error! Try again';
         textarea.disabled = false;
       }
-      setTimeout(checkRateLimit, 1000); // update UI after submit
+      setTimeout(checkRateLimit, 1000); 
     });
-    setInterval(checkRateLimit, 10000); // update UI every 10s
+    setInterval(checkRateLimit, 10000); 
   }
 });
